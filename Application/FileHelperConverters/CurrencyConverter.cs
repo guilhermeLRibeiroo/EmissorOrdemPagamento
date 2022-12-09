@@ -10,7 +10,7 @@ namespace Application.FileHelperConverters
 
         public CurrencyConverter()
         {
-            nfi.NumberDecimalSeparator = ",";
+            nfi.CurrencyDecimalSeparator = ",";
             nfi.CurrencySymbol = "R$";
             nfi.NegativeSign = "-";
         }
