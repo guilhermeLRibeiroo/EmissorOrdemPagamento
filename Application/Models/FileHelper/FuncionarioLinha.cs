@@ -13,7 +13,7 @@ namespace Application.Models.FileHelper
 
         [FieldConverter(typeof(CurrencyConverter))]
         public decimal ValorHora { get; set; }
-        [FieldConverter(ConverterKind.Date, "dd-MM-yyyy")]
+        [FieldConverter(ConverterKind.Date, "dd/MM/yyyy")]
         public DateTime Data { get; set; }
         [FieldConverter(ConverterKind.Date, "HH:mm:ss")]
         public DateTime HoraEntrada { get; set; }
