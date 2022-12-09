@@ -55,7 +55,7 @@
         "Departamento": "Departamento1",
         "MesVigencia": "Abril",
         "AnoVigencia": 2022,
-        "TotalPagar": -4243.50,
+        "TotalPagar": 356.50,
         "TotalDescontos": 4614.50,
         "TotalExtras": 15.00,
         "Funcionarios": [
