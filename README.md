@@ -55,14 +55,14 @@
         "Departamento": "Departamento1",
         "MesVigencia": "Abril",
         "AnoVigencia": 2022,
-        "TotalPagar": -424350.0,
-        "TotalDescontos": 461450.0,
-        "TotalExtras": 1500.0,
+        "TotalPagar": -4243.50,
+        "TotalDescontos": 4614.50,
+        "TotalExtras": 15.00,
         "Funcionarios": [
             {
                 "Nome": "Funcionário um",
                 "Codigo": 1,
-                "TotalReceber": 25500.0,
+                "TotalReceber": 255.00,
                 "HorasExtras": 1.0,
                 "HorasDebito": 0.0,
                 "DiasFalta": 19,
@@ -72,7 +72,7 @@
             {
                 "Nome": "Funcionário dois",
                 "Codigo": 2,
-                "TotalReceber": 10150.0,
+                "TotalReceber": 101.50,
                 "HorasExtras": 0.0,
                 "HorasDebito": 1.0,
                 "DiasFalta": 20,
