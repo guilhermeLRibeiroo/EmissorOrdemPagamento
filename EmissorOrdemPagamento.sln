@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{E450D98B-EA9E-4A47-A80F-E319225A0731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{1259CF6D-F811-4184-A938-4CD80D475D13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E450D98B-EA9E-4A47-A80F-E319225A0731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E450D98B-EA9E-4A47-A80F-E319225A0731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E450D98B-EA9E-4A47-A80F-E319225A0731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E450D98B-EA9E-4A47-A80F-E319225A0731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1259CF6D-F811-4184-A938-4CD80D475D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1259CF6D-F811-4184-A938-4CD80D475D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1259CF6D-F811-4184-A938-4CD80D475D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1259CF6D-F811-4184-A938-4CD80D475D13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9005274-3F3F-4C0D-A776-3D2579C9B5A8}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+	EndGlobalSection
+EndGlobal

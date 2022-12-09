@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Resultado Emissão";
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.DepartamentosJSON))
+{
+    if (ViewBag.Erros != null
+        && ViewBag.Erros.Count > 0)
+    {
+        <p class="lead">
+            Alguns departamentos foram emitidos com sucesso!
+            <br />
+            <span class="text-danger">
+                Apenas os que não tinham erro foram emitidos!
+            </span>
+        </p>
+    }
+    else
+    {
+        <p class="lead">
+            Departamentos emitidos com sucesso!
+        </p>
+    }
+    <p class="lead">
+        @Html.ActionLink("Faça o Download", "DownloadResultado", "Emissor", new { json = ViewBag.DepartamentosJSON }, new { @class = "btn btn-lg btn-secondary fw-bold border-white bg-white" })
+    </p>
+
+    if (ViewBag.Erros != null
+        && ViewBag.Erros.Count > 0)
+    {
+        <hr />
+        <p class="lead text-danger">
+            Erros
+        </p>
+
+        foreach (var erro in (IList<Application.Models.ErroDTO>)ViewBag.Erros)
+        {
+            <p class="lead">
+                <div>
+                    Nome do Arquivo:
+                    <br />
+                    @erro.NomeArquivo
+                </div>
+                <div>
+                    <span class="text-danger">
+                        @erro.Mensagem
+                    </span>
+                </div>
+            </p>
+        }
+    }
+}
+
+@if (string.IsNullOrEmpty(ViewBag.DepartamentosJSON))
+{
+    <p class="lead">
+        Nenhum departamento carregado no JSON devido a erros!
+    </p>
+}
+else
+{
+    <hr />
+    <p class="lead">
+        Utilize nosso serviço novamente!
+    </p>
+}
+
+<p class="lead">
+    @Html.ActionLink("Clique aqui e envie novamente!", "Index", "Emissor", new { }, new { @class = "btn btn-lg btn-secondary fw-bold border-white bg-white" })
+</p>

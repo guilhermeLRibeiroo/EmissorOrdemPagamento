@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Emissor";
+}
+
+<h1>Emissor de Pagamento</h1>
+
+<p class="lead">
+    Selecione uma pasta com todos os arquivos .csv
+</p>
+
+<div id="mensagemPosEnvio" style="display: none;">
+    <p class="lead">
+        Arquivo enviado!
+        <br />
+        <div class="spinner-border"></div>
+        <br />
+        Aguarde o processamento!
+    </p>
+</div>
+
+<p class="lead">
+    <input class="btn btn-light" type="file" id="files" webkitdirectory />
+    <button type="submit" class="btn btn-light fw-bold border-white bg-white" id="enviarPasta">Enviar pasta</button>
+</p>
+
+<script type="text/javascript">
+    document.onreadystatechange = function () {
+        if (document.readyState == "interactive") {
+            $("#enviarPasta").attr("disabled", true);
+            $("#mensagemPosEnvio").css("display", "none");
+
+            var habilitaBotaoCasoTiverAlgoNoInput = (e) => {
+                if (e.target.files.length > 0) {
+                    $("#enviarPasta").attr("disabled", false);
+                } else {
+                    $("#enviarPasta").attr("disabled", true);
+                }
+            }
+
+            $("#files").on('change', habilitaBotaoCasoTiverAlgoNoInput);
+            $("#files").on('blur', habilitaBotaoCasoTiverAlgoNoInput);
+
+            $("#enviarPasta").on('click', () => {
+                $("#enviarPasta").attr("disabled", true);
+                $("#mensagemPosEnvio").css("display", "block");
+
+                let fileList = $("#files")[0].files;
+
+                let data = new FormData();
+                for (let i = 0; i < fileList.length; i++)
+                    data.append(fileList[i].name, fileList[i]);
+
+                fetch('@Url.Action("Emitir", "Emissor")', {
+                    method: 'POST',
+                    body: data,
+                }).then(() => {
+                    $("#submit").attr("disabled", false);
+                    window.location.href = '@Url.Action("Resultado", "Emissor")';
+                }).catch(() => {
+                    $("#submit").attr("disabled", false);
+                });
+            });
+        }
+    };
+</script>
