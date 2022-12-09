@@ -156,7 +156,7 @@ namespace Application.Services.Emissor
                 var _funcionario = departamento.Funcionarios[i];
 
                 departamento.TotalDescontos += _funcionario.ValorHora * (_funcionario.DiasFalta * 8);
-                departamento.TotalPagar += _funcionario.TotalReceber - (_funcionario.ValorHora * (_funcionario.DiasFalta * 8));
+                departamento.TotalPagar += _funcionario.TotalReceber;
             }
 
             resultado.Departamentos.Add(departamento);
