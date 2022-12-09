@@ -25,7 +25,7 @@
 ```
 
 <p> 
-  Contendo informações de funcionários separadas por ' ; ' ordenados da seguinte forma: 
+  Contendo informações de funcionários separados por ' ; ' e ordenados da seguinte forma: 
   </br>
   Código;NomeFuncionário;ValorHora(R$ 00,00);Data(dd-MM-yyyy);HoraEntrada(HH:mm:ss);HoraSaída(HH:mm:ss);Almoço(00:00-00:00)
 </p>
