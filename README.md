@@ -26,18 +26,34 @@
 
 <p> 
   Contendo informações de funcionários separados por ' ; ' e ordenados da seguinte forma: 
-  </br>
-  Código;NomeFuncionário;ValorHora(R$ 00,00);Data(dd-MM-yyyy);HoraEntrada(HH:mm:ss);HoraSaída(HH:mm:ss);Almoço(00:00-00:00)
-</p>
-
-<p>
-  Exemplo:
 </p>
 
 ```
-  01;Funcionário um;R$ 15,00;10/10/2022;08:00:00;17:00:00;12:00 - 13:00
-  02;Funcionário dois;R$ 14,50;10/10/2022;09:00:00;17:00:00;12:00 - 13:00
-  01;Funcionário um;R$ 15,00;11/10/2022;08:00:00;18:00:00;12:00 - 13:00
+  Código;NomeFuncionário;ValorHora;Data;HoraEntrada;HoraSaída;Almoço
+```
+
+<p>
+    Sendo o formato dos campos 
+</p>
+
+```
+  ValorHora = "R$ 00,00"
+  Data = "dd-MM-yyyy"
+  HoraEntrada e HoraSaída = "HH:mm:ss"
+  Almoço = "00:00-00:00"
+```
+
+<p>
+  Exemplo:
+  </br>
+  <b>Os números no começo são apenas representações de qual linha está escrito.</b>
+</p>
+
+```
+1-  Código;NomeFuncionário;ValorHora;Data;HoraEntrada;HoraSaída;Almoço
+2-  01;Funcionário um;R$ 15,00;10/10/2022;08:00:00;17:00:00;12:00 - 13:00
+3-  02;Funcionário dois;R$ 14,50;10/10/2022;09:00:00;17:00:00;12:00 - 13:00
+4-  01;Funcionário um;R$ 15,00;11/10/2022;08:00:00;18:00:00;12:00 - 13:00
 ```
 
 <p>
